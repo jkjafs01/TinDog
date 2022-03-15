@@ -1,0 +1,173 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Title Section*/
+#title {
+  background-color: #ff4c68;
+  color: white;
+}
+#title .container-fluid {
+  padding: 3% 15%;
+}
+#title h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.1rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+#title .navbar {
+  padding-bottom: 4rem;
+}
+#title .navbar .navbar-brand {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+#title .navbar .nav-item {
+  padding: 0 18px;
+}
+#title .navbar .nav-item .nav-link {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: thin;
+}
+#title button {
+  margin: 5% 3% 5% 0%;
+}
+#title .title-img {
+  width: 50%;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+}
+
+/* Features Section */
+#features {
+  padding: 5rem 0;
+}
+#features > .row > .description {
+  text-align: center;
+  margin: 2rem 0;
+  text-decoration: none;
+}
+#features > .row > .description i {
+  color: #ef8172;
+  font-size: 3rem;
+  line-height: 1.7em;
+}
+#features > .row > .description h3 {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: black;
+}
+#features > .row > .description p {
+  color: darkgray;
+  font-size: 1.2rem;
+}
+#features > .row > .description:hover > i {
+  color: #ff4c68;
+}
+
+/* Testimonial Section */
+#testimonials {
+  text-align: center;
+  background-color: #ff4c68;
+  color: white;
+  padding: 5% 0% 8%;
+}
+#testimonials .carousel-inner {
+  padding-bottom: 20px;
+}
+#testimonials .carousel-inner .carousel-item {
+  padding: 3% 15%;
+  height: 550px;
+}
+#testimonials .carousel-inner .carousel-item h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.5;
+  min-height: 4.5em;
+}
+#testimonials .carousel-inner .carousel-item img {
+  width: 15%;
+  border-radius: 50%;
+}
+#testimonials .carousel-inner .carousel-item em {
+  font-size: 1.5rem;
+}
+
+#press {
+  text-align: center;
+  background-color: #ff4c68;
+  padding-bottom: 5%;
+}
+#press img {
+  width: 15%;
+  margin: 10px 20px 50px;
+}
+
+#pricing .container .row {
+  padding: 3% 15%;
+}
+#pricing .container .row > div {
+  padding: 1rem;
+}
+#pricing .container .row > div .card {
+  height: 100%;
+}
+#pricing .container .row > div .card .card-header h4 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: bold;
+  line-height: 1.5;
+  text-align: center;
+}
+#pricing .container .row > div .card > div > .price {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+/* Media query for Tablet and Smartphones*/
+@media (max-width: 1199px) {
+  #title .container-fluid {
+    padding: 3% 2%;
+  }
+  #title .container-fluid .navbar .nav-item {
+    border-bottom: 2px solid white;
+  }
+  #title .container-fluid .navbar .nav-item .nav-link {
+    font-size: 2rem;
+  }
+  #title button {
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+  }
+
+  #features {
+    max-width: 95%;
+  }
+  #features > .row > .description h3 {
+    font-size: 2.7rem;
+  }
+  #features > .row > .description p {
+    font-size: 1.85rem;
+  }
+
+  #testimonials .carousel-inner .carousel-item {
+    padding: 6% 2%;
+  }
+  #testimonials .carousel-inner .carousel-item img {
+    width: 25%;
+  }
+  #testimonials .carousel-inner .carousel-item em {
+    font-size: 2rem;
+  }
+
+  #pricing .container .row {
+    padding: 6% 2%;
+  }
+}

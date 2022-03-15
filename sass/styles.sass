@@ -1,0 +1,202 @@
+@import variables.sass
+
+@mixin h-basic ($font-size: 3.1rem  )
+  font-family: $ff-monserrat
+  font-size: $font-size
+  font-weight: bold
+  line-height: 1.5
+
+
+body
+  font-family: $ff-monserrat
+
+
+/* Title Section*/
+#title
+  background-color: $main-background-color
+  color: white
+
+
+  .container-fluid
+    padding: 3% 15%
+
+
+  h1
+    @include h-basic($font-size: 3.1rem)
+
+
+  // navbar
+  .navbar
+
+    padding-bottom: 4rem
+
+    .navbar-brand
+      font-family: $ff-ubuntu
+      font-size: 2.5rem
+      font-weight: bold
+
+    .nav-item
+      padding: 0 18px
+
+
+      .nav-link
+        font-size: 1.2rem
+        color: white
+        font-weight: thin
+
+
+
+
+
+  button
+    margin: 5% 3% 5% 0%
+
+  .title-img
+    width: 50%
+    transform: rotate(25deg)
+
+
+
+
+/* Features Section */
+#features
+  padding: 5rem 0
+
+  >.row
+    >.description
+        text-align: center
+        margin: 2rem 0
+        text-decoration: none
+
+        i
+          color: $icons-color
+          font-size: 3rem
+          line-height: 1.7em
+
+        h3
+          font-size: 2rem
+          font-family: $ff-monserrat
+          font-weight: bold
+          color: black
+
+        p
+          color: $desc-color
+          font-size: 1.2rem
+
+    >.description:hover
+      >i
+        color: $main-background-color
+
+
+
+/* Testimonial Section */
+
+#testimonials
+  text-align: center
+  background-color: $main-background-color
+  color: white
+  padding: 5% 0% 8%
+
+  .carousel-inner
+    padding-bottom: 20px
+
+    .carousel-item
+      padding: 3% 15%
+      height: 550px
+
+      h2
+        @include h-basic($font-size: 3rem)
+        min-height: 4.5em
+
+
+      img
+        width: 15%
+        border-radius: 50%
+
+      em
+        font-size: 1.5rem
+
+
+#press
+  text-align: center
+  background-color: $main-background-color
+  padding-bottom: 5%
+
+  img
+    width: 15%
+    margin: 10px 20px 50px
+
+
+
+#pricing
+  .container
+    .row
+      padding: 3% 15%
+
+
+      >div
+        padding: 1rem
+
+        .card
+          height: 100%
+
+
+          .card-header
+            h4
+              @include h-basic ($font-size: 1.4rem  )
+              text-align: center
+
+
+          >div
+            > .price
+              @include h-basic ($font-size: 1.3rem  )
+                padding-bottom: 2rem
+
+
+
+
+
+/* Media query for Tablet and Smartphones*/
+@media (max-width: 1199px)
+  #title
+    .container-fluid
+      padding: 3% 2%
+
+      .navbar
+        .nav-item
+          border-bottom : 2px solid white
+          .nav-link
+              font-size: 2rem
+
+
+    button
+      font-size: 2.5rem
+      padding: 1rem 2rem
+
+  #features
+    max-width: 95%
+
+    >.row
+      >.description
+        h3
+          font-size: 2.7rem
+        p
+          font-size: 1.85rem
+
+
+  #testimonials
+
+    .carousel-inner
+      .carousel-item
+        padding: 6% 2%
+
+        img
+          width: 25%
+
+        em
+          font-size: 2rem
+
+  #pricing
+    .container
+      .row
+        padding: 6% 2%
