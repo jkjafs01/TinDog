@@ -16,9 +16,8 @@ body
   background-color: $main-background-color
   color: white
 
-
   .container-fluid
-    padding: 3% 15%
+    padding: 3% 15% 7%
 
 
   h1
@@ -47,22 +46,30 @@ body
 
 
 
+  .row
+    position: relative
 
   button
     margin: 5% 3% 5% 0%
 
   .title-img
-    width: 50%
+    position: absolute
+    width: 20%
     transform: rotate(25deg)
-
+    right: 20%
 
 
 
 /* Features Section */
 #features
-  padding: 5rem 0
+  padding: $padding-seccion
+  background-color: white
+  position: relative
+
 
   >.row
+    width: 90%
+    margin: 0 auto
     >.description
         text-align: center
         margin: 2rem 0
@@ -95,7 +102,8 @@ body
   text-align: center
   background-color: $main-background-color
   color: white
-  padding: 5% 0% 8%
+  // padding: 5% 0% 8%
+  padding: $padding-seccion
 
   .carousel-inner
     padding-bottom: 20px
@@ -120,7 +128,7 @@ body
 #press
   text-align: center
   background-color: $main-background-color
-  padding-bottom: 5%
+  padding: $padding-seccion
 
   img
     width: 15%
@@ -129,6 +137,17 @@ body
 
 
 #pricing
+  padding: $padding-seccion
+  text-align: center
+
+  >h2
+    padding: 1rem 0
+    @include h-basic ($font-size: 3rem  )
+
+  >p
+    color: $desc-color
+    // font-size: rem
+
   .container
     .row
       padding: 3% 15%
@@ -138,40 +157,93 @@ body
         padding: 1rem
 
         .card
-          height: 100%
 
 
           .card-header
             h4
               @include h-basic ($font-size: 1.4rem  )
-              text-align: center
+
 
 
           >div
             > .price
-              @include h-basic ($font-size: 1.3rem  )
-                padding-bottom: 2rem
+              @include h-basic ($font-size: 2rem  )
 
 
+
+
+
+
+#cta
+  background-color: $main-background-color
+  text-align: center
+  padding: $padding-seccion
+
+
+  h3
+    @include h-basic ($font-size: 3rem  )
+    color: white
+    padding: 3rem
+    width: 65%
+    margin: 0 auto
+
+  button
+    margin: 3rem .5rem
+
+
+
+#footer
+  padding: 4rem 0
+  text-align: center
+
+  .social-network
+    padding-bottom: 1rem
+    i
+      font-size: 1.3rem
+      padding: 0 .5rem
+
+  p
+    color: $desc-color
+    font-size: .75rem
 
 
 
 /* Media query for Tablet and Smartphones*/
-@media (max-width: 1199px)
+@media only screen and (max-width: 991px)
   #title
     .container-fluid
       padding: 3% 2%
 
       .navbar
+        .navbar-brand
+          font-size: 4rem
+
+        .navbar-toggler-icon
+          font-size: 2.5rem
+
         .nav-item
           border-bottom : 2px solid white
           .nav-link
               font-size: 2rem
 
 
-    button
-      font-size: 2.5rem
-      padding: 1rem 2rem
+    .row
+      text-align: center
+
+      >div
+
+
+      button
+        font-size: 2.5rem
+        padding: 1rem 2rem
+
+
+      .title-img
+        position: static
+        width: 35%
+        transform: rotate(0deg)
+        padding: 3rem 0
+
 
   #features
     max-width: 95%
@@ -196,7 +268,42 @@ body
         em
           font-size: 2rem
 
+
+
+
   #pricing
-    .container
-      .row
+
+    >.container
+      max-width: 95%
+
+      >.row
         padding: 6% 2%
+
+        >div .card
+
+          .card-header
+
+            .card-title
+              font-size: 3rem
+
+          .card-body
+
+            .price
+              font-size: 2.5rem
+
+            .card-text
+              font-size: 2rem
+
+            button
+              font-size: 2.3rem
+              padding: 2rem
+              margin: 2rem 0
+
+
+
+  #footer
+    .social-network i
+      font-size: 2.5rem
+
+    .copyright
+      font-size: .2rem

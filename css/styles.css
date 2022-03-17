@@ -8,7 +8,7 @@ body {
   color: white;
 }
 #title .container-fluid {
-  padding: 3% 15%;
+  padding: 3% 15% 7%;
 }
 #title h1 {
   font-family: "Montserrat", sans-serif;
@@ -32,18 +32,29 @@ body {
   color: white;
   font-weight: thin;
 }
+#title .row {
+  position: relative;
+}
 #title button {
   margin: 5% 3% 5% 0%;
 }
 #title .title-img {
-  width: 50%;
+  position: absolute;
+  width: 20%;
   -webkit-transform: rotate(25deg);
           transform: rotate(25deg);
+  right: 20%;
 }
 
 /* Features Section */
 #features {
-  padding: 5rem 0;
+  padding: 4rem 0;
+  background-color: white;
+  position: relative;
+}
+#features > .row {
+  width: 90%;
+  margin: 0 auto;
 }
 #features > .row > .description {
   text-align: center;
@@ -51,7 +62,7 @@ body {
   text-decoration: none;
 }
 #features > .row > .description i {
-  color: #ef8172;
+  color: #ff7f93;
   font-size: 3rem;
   line-height: 1.7em;
 }
@@ -62,7 +73,7 @@ body {
   color: black;
 }
 #features > .row > .description p {
-  color: darkgray;
+  color: gray;
   font-size: 1.2rem;
 }
 #features > .row > .description:hover > i {
@@ -74,7 +85,7 @@ body {
   text-align: center;
   background-color: #ff4c68;
   color: white;
-  padding: 5% 0% 8%;
+  padding: 4rem 0;
 }
 #testimonials .carousel-inner {
   padding-bottom: 20px;
@@ -101,40 +112,91 @@ body {
 #press {
   text-align: center;
   background-color: #ff4c68;
-  padding-bottom: 5%;
+  padding: 4rem 0;
 }
 #press img {
   width: 15%;
   margin: 10px 20px 50px;
 }
 
+#pricing {
+  padding: 4rem 0;
+  text-align: center;
+}
+#pricing > h2 {
+  padding: 1rem 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+#pricing > p {
+  color: gray;
+}
 #pricing .container .row {
   padding: 3% 15%;
 }
 #pricing .container .row > div {
   padding: 1rem;
 }
-#pricing .container .row > div .card {
-  height: 100%;
-}
 #pricing .container .row > div .card .card-header h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.5;
-  text-align: center;
 }
 #pricing .container .row > div .card > div > .price {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.3rem;
+  font-size: 2rem;
   font-weight: bold;
   line-height: 1.5;
 }
 
+#cta {
+  background-color: #ff4c68;
+  text-align: center;
+  padding: 4rem 0;
+}
+#cta h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: white;
+  padding: 3rem;
+  width: 65%;
+  margin: 0 auto;
+}
+#cta button {
+  margin: 3rem 0.5rem;
+}
+
+#footer {
+  padding: 4rem 0;
+  text-align: center;
+}
+#footer .social-network {
+  padding-bottom: 1rem;
+}
+#footer .social-network i {
+  font-size: 1.3rem;
+  padding: 0 0.5rem;
+}
+#footer p {
+  color: gray;
+  font-size: 0.75rem;
+}
+
 /* Media query for Tablet and Smartphones*/
-@media (max-width: 1199px) {
+@media only screen and (max-width: 991px) {
   #title .container-fluid {
     padding: 3% 2%;
+  }
+  #title .container-fluid .navbar .navbar-brand {
+    font-size: 4rem;
+  }
+  #title .container-fluid .navbar .navbar-toggler-icon {
+    font-size: 2.5rem;
   }
   #title .container-fluid .navbar .nav-item {
     border-bottom: 2px solid white;
@@ -142,9 +204,19 @@ body {
   #title .container-fluid .navbar .nav-item .nav-link {
     font-size: 2rem;
   }
-  #title button {
+  #title .row {
+    text-align: center;
+  }
+  #title .row button {
     font-size: 2.5rem;
     padding: 1rem 2rem;
+  }
+  #title .row .title-img {
+    position: static;
+    width: 35%;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    padding: 3rem 0;
   }
 
   #features {
@@ -167,7 +239,31 @@ body {
     font-size: 2rem;
   }
 
-  #pricing .container .row {
+  #pricing > .container {
+    max-width: 95%;
+  }
+  #pricing > .container > .row {
     padding: 6% 2%;
+  }
+  #pricing > .container > .row > div .card .card-header .card-title {
+    font-size: 3rem;
+  }
+  #pricing > .container > .row > div .card .card-body .price {
+    font-size: 2.5rem;
+  }
+  #pricing > .container > .row > div .card .card-body .card-text {
+    font-size: 2rem;
+  }
+  #pricing > .container > .row > div .card .card-body button {
+    font-size: 2.3rem;
+    padding: 2rem;
+    margin: 2rem 0;
+  }
+
+  #footer .social-network i {
+    font-size: 2.5rem;
+  }
+  #footer .copyright {
+    font-size: 0.2rem;
   }
 }
