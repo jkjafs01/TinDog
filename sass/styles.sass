@@ -1,27 +1,37 @@
 @import variables.sass
 
 @mixin h-basic ($font-size: 3.1rem  )
-  font-family: $ff-monserrat
   font-size: $font-size
-  font-weight: bold
-  line-height: 1.5
 
 
 body
-  font-family: $ff-monserrat
+  font-family: $ff-headings
+  text-align: center
+
+
+  // Padding between secctions
+  > section, > footer
+    padding: $padding-seccion
+
+
+// Generic h[1-6] format
+h1, h2, h3, h4, h5, h6
+  font-family: $ff-headings
+  font-weight: bold
+  line-height: 1.5
+
 
 
 /* Title Section*/
 #title
   background-color: $main-background-color
   color: white
-
-  .container-fluid
-    padding: 3% 15% 7%
+  padding: 2% 15% 7%
 
 
   h1
     @include h-basic($font-size: 3.1rem)
+    text-align: left
 
 
   // navbar
@@ -30,7 +40,7 @@ body
     padding-bottom: 4rem
 
     .navbar-brand
-      font-family: $ff-ubuntu
+      font-family: $ff-navbar
       font-size: 2.5rem
       font-weight: bold
 
@@ -42,8 +52,6 @@ body
         font-size: 1.2rem
         color: white
         font-weight: thin
-
-
 
 
   .row
@@ -60,9 +68,9 @@ body
 
 
 
+
 /* Features Section */
 #features
-  padding: $padding-seccion
   background-color: white
   position: relative
 
@@ -71,7 +79,7 @@ body
     width: 90%
     margin: 0 auto
     >.description
-        text-align: center
+
         margin: 2rem 0
         text-decoration: none
 
@@ -82,7 +90,7 @@ body
 
         h3
           font-size: 2rem
-          font-family: $ff-monserrat
+          font-family: $ff-headings
           font-weight: bold
           color: black
 
@@ -99,11 +107,9 @@ body
 /* Testimonial Section */
 
 #testimonials
-  text-align: center
+
   background-color: $main-background-color
   color: white
-  // padding: 5% 0% 8%
-  padding: $padding-seccion
 
   .carousel-inner
     padding-bottom: 20px
@@ -126,9 +132,8 @@ body
 
 
 #press
-  text-align: center
+
   background-color: $main-background-color
-  padding: $padding-seccion
 
   img
     width: 15%
@@ -137,8 +142,7 @@ body
 
 
 #pricing
-  padding: $padding-seccion
-  text-align: center
+
 
   >h2
     padding: 1rem 0
@@ -146,7 +150,6 @@ body
 
   >p
     color: $desc-color
-    // font-size: rem
 
   .container
     .row
@@ -176,8 +179,6 @@ body
 
 #cta
   background-color: $main-background-color
-  text-align: center
-  padding: $padding-seccion
 
 
   h3
@@ -193,9 +194,6 @@ body
 
 
 #footer
-  padding: 4rem 0
-  text-align: center
-
   .social-network
     padding-bottom: 1rem
     i
@@ -211,8 +209,9 @@ body
 /* Media query for Tablet and Smartphones*/
 @media only screen and (max-width: 991px)
   #title
+    padding: 3% 2%
+
     .container-fluid
-      padding: 3% 2%
 
       .navbar
         .navbar-brand
@@ -228,7 +227,7 @@ body
 
 
     .row
-      text-align: center
+
 
       >div
 
@@ -246,7 +245,7 @@ body
 
 
   #features
-    max-width: 95%
+    max-width: 100%
 
     >.row
       >.description
@@ -306,4 +305,5 @@ body
       font-size: 2.5rem
 
     .copyright
-      font-size: .2rem
+      padding-top: 3rem
+      font-size: .4rem
